@@ -1,17 +1,19 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './styles/Home.scss';
 import Lottie from 'react-lottie';
 import programingAnimation from '@/assets/lottie-files/developer.json';
 
-export interface HomeInterface {}
-const Home: React.FC<HomeInterface> = () => {
+export interface HomeInterface {
+  reference: HTMLElement | any;
+}
+const Home: React.FC<HomeInterface> = ({ reference }) => {
   const [loadFirstAnimation, setLoadFirstAnimation] = useState(false);
-  const refView = useRef(null);
+
   const refAn = useRef(null);
   const inViewAn = false;
 
   return (
-    <section ref={refView} className="home" id="home)">
+    <section ref={reference} className="home" id="home)">
       <div ref={refAn}>
         <h1
           className={`home__seg-1 home__seg-1--${
