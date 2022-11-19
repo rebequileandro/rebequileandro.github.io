@@ -1,11 +1,10 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import './App.css';
 import { Tabbar } from './components';
+import { Home } from './pages';
 
 function App() {
   return (
     <>
+      <Home />
       <Tabbar inView="home" />
     </>
   );

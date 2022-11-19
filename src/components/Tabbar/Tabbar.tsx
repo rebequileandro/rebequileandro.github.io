@@ -1,4 +1,5 @@
-import React, { ComponentProps } from 'react';
+import React from 'react';
+import './styles/Tabbar.scss';
 import Lottie from 'react-lottie';
 import homeAnimation from '@/assets/lottie-files/tabbar/home-gradient-icon.json';
 import aboutMeAnimation from '@/assets/lottie-files/tabbar/about-me-gradient-icon.json';
@@ -8,7 +9,6 @@ import home from '@/assets/icon/tabbar/home-static-icon.svg';
 import aboutMe from '@/assets/icon/tabbar/about-me-static-icon.svg';
 import projects from '@/assets/icon/tabbar/portfolio-static-icon.svg';
 import contact from '@/assets/icon/tabbar/contact-static-icon.svg';
-
 export interface TabbarInterface {
   inView: string;
 }
@@ -22,40 +22,40 @@ const Tabbar: React.FC<TabbarInterface> = ({ inView }) => {
     };
   };
   return (
-    <nav className="navbar">
+    <nav className="tabbar">
       <a href="#home)">
-        <div className="navbar__icon-container">
+        <div className="tabbar__icon-container">
           {inView === 'home' ? (
             <Lottie options={lottieOptions(homeAnimation)} />
           ) : (
-            <img className="navbar__icon" src={home} alt="home" />
+            <img className="tabbar__icon" src={home} alt="home" />
           )}
         </div>
       </a>
       <a href="#about-me)">
-        <div className="navbar__icon-container">
+        <div className="tabbar__icon-container">
           {inView === 'about-me' ? (
             <Lottie options={lottieOptions(aboutMeAnimation)} />
           ) : (
-            <img className="navbar__icon" src={aboutMe} alt="about me" />
+            <img className="tabbar__icon" src={aboutMe} alt="about me" />
           )}
         </div>
       </a>
       <a href="#projects)">
-        <div className="navbar__icon-container">
+        <div className="tabbar__icon-container">
           {inView === 'projects' ? (
             <Lottie options={lottieOptions(projectsAnimation)} />
           ) : (
-            <img className="navbar__icon" src={projects} alt="project" />
+            <img className="tabbar__icon" src={projects} alt="project" />
           )}
         </div>
       </a>
       <a href="#contact)">
-        <div className="navbar__icon-container">
+        <div className="tabbar__icon-container">
           {inView === 'contact' ? (
             <Lottie options={lottieOptions(contactAnimation)} />
           ) : (
-            <img className="navbar__icon" src={contact} alt="contact" />
+            <img className="tabbar__icon" src={contact} alt="contact" />
           )}
         </div>
       </a>
