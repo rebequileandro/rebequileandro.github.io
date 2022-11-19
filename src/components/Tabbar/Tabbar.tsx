@@ -5,10 +5,11 @@ import homeAnimation from '@/assets/lottie-files/tabbar/home-gradient-icon.json'
 import aboutMeAnimation from '@/assets/lottie-files/tabbar/about-me-gradient-icon.json';
 import projectsAnimation from '@/assets/lottie-files/tabbar/portfolio-gradient-icon.json';
 import contactAnimation from '@/assets/lottie-files/tabbar/contact-gradient-icon.json';
-import home from '@/assets/icon/tabbar/home-static-icon.svg';
-import aboutMe from '@/assets/icon/tabbar/about-me-static-icon.svg';
-import projects from '@/assets/icon/tabbar/portfolio-static-icon.svg';
-import contact from '@/assets/icon/tabbar/contact-static-icon.svg';
+import home from '@/assets/icons/tabbar/home-static-icon.svg';
+import aboutMe from '@/assets/icons/tabbar/about-me-static-icon.svg';
+import projects from '@/assets/icons/tabbar/porfolio-static-icon.svg';
+import contact from '@/assets/icons/tabbar/contact-static-icon.svg';
+
 export interface TabbarInterface {
   inView: string;
 }
@@ -16,7 +17,7 @@ export interface TabbarInterface {
 const Tabbar: React.FC<TabbarInterface> = ({ inView }) => {
   const lottieOptions = (data: {}) => {
     return {
-      loop: true,
+      loop: false,
       autoplay: true,
       animationData: data
     };
