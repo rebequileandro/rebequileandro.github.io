@@ -1,5 +1,62 @@
 @import '@/scss/index.scss';
 .aboutme {
   @include limits(90vw, 100vh, auto);
-  border: solid 1px aqua;
+  @include center;
+  gap: 3rem;
+  // border: solid 1px aqua;
+  &__photos {
+    width: 40rem;
+    height: 40rem;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0px 0px 10rem 0.1rem #00ccff38;
+    &--in {
+      opacity: 0;
+      animation: fade-in-07 1s 1 0.5s forwards;
+    }
+    &--out {
+      opacity: 0.7;
+      animation: fade-out 1s 1 forwards;
+    }
+    &__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__decription-container {
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+  }
+  &__sub-title {
+    @include gradien-text;
+    transition: all 1s;
+    opacity: 0;
+    &--in {
+      opacity: 1;
+
+      animation: fade-in-translateX-0-text-shadow 2.5s 1;
+    }
+    &--out {
+      opacity: 1;
+      animation: fade-out 1s 1 forwards;
+    }
+    &:hover {
+      text-shadow: 0px 0px 1rem #00ccff;
+    }
+  }
+  &__description {
+    transition: all 1s;
+    opacity: 0;
+    &--in {
+      transform: translateX(20%);
+      animation: fade-in-translateX-0 1s 1 forwards;
+    }
+    &--out {
+      opacity: 1;
+      animation: fade-out 1s 1 forwards;
+    }
+  }
 }

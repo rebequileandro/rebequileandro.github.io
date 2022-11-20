@@ -24,22 +24,9 @@
     $PRIMARY-BACKGROUND-COLOR 80%
   );
 }
-@mixin gradien-scroll-bar {
-  background: linear-gradient(180deg, $SECONDARY-COLOR 0%, $TERTIARY-COLOR 80%);
-}
-@mixin gradien-text {
-  background: linear-gradient(
-    90deg,
-    $SECONDARY-COLOR,
-    $TERTIARY-COLOR 65%,
-    $CUATERNARY-COLOR 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
 @mixin gradien-text {
-  background-image: linear-gradient(
+  background: linear-gradient(
     90deg,
     $SECONDARY-COLOR,
     $TERTIARY-COLOR 65%,
