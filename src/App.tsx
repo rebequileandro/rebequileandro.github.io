@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Tabbar } from './components';
-import { useObserver } from './hooks';
 import { AboutMe, Contact, Home, Projects } from './pages';
 
 const App: React.FC = () => {
