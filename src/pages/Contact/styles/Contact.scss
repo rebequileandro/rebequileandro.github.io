@@ -1,5 +1,6 @@
 @import '@/scss/index.scss';
-.aboutme {
+
+.contact {
   @include limits(90vw, 100vh, auto);
   border: solid 1px aqua;
 }

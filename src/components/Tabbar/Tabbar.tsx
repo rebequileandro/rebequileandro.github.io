@@ -24,7 +24,7 @@ const Tabbar: React.FC<TabbarInterface> = ({ inView }) => {
   };
   return (
     <nav className="tabbar">
-      <a href="#home)">
+      <a href="#home">
         <div className="tabbar__icon-container">
           {inView === 'home' ? (
             <Lottie options={lottieOptions(homeAnimation)} />
@@ -33,7 +33,7 @@ const Tabbar: React.FC<TabbarInterface> = ({ inView }) => {
           )}
         </div>
       </a>
-      <a href="#about-me)">
+      <a href="#about-me">
         <div className="tabbar__icon-container">
           {inView === 'about-me' ? (
             <Lottie options={lottieOptions(aboutMeAnimation)} />
@@ -42,7 +42,7 @@ const Tabbar: React.FC<TabbarInterface> = ({ inView }) => {
           )}
         </div>
       </a>
-      <a href="#projects)">
+      <a href="#projects">
         <div className="tabbar__icon-container">
           {inView === 'projects' ? (
             <Lottie options={lottieOptions(projectsAnimation)} />
@@ -51,7 +51,7 @@ const Tabbar: React.FC<TabbarInterface> = ({ inView }) => {
           )}
         </div>
       </a>
-      <a href="#contact)">
+      <a href="#contact">
         <div className="tabbar__icon-container">
           {inView === 'contact' ? (
             <Lottie options={lottieOptions(contactAnimation)} />

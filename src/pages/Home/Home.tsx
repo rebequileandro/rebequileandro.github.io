@@ -2,18 +2,25 @@ import React, { useEffect, useRef, useState } from 'react';
 import './styles/Home.scss';
 import Lottie from 'react-lottie';
 import programingAnimation from '@/assets/lottie-files/developer.json';
+import { useObserver } from '@/hooks';
 
 export interface HomeInterface {
-  reference: HTMLElement | any;
+  serInView: React.Dispatch<React.SetStateAction<string>>;
 }
-const Home: React.FC<HomeInterface> = ({ reference }) => {
+const Home: React.FC<HomeInterface> = ({ serInView }) => {
   const [loadFirstAnimation, setLoadFirstAnimation] = useState(false);
+  const [isIntersecting, setReference] = useObserver({
+    root: null,
+    threshold: 0.5
+  });
+  useEffect(() => {
+    isIntersecting && serInView('home');
+  }, [isIntersecting]);
 
   const refAn = useRef(null);
   const inViewAn = false;
-
   return (
-    <section ref={reference} className="home" id="home)">
+    <section ref={setReference} className="home" id="home">
       <div ref={refAn}>
         <h1
           className={`home__seg-1 home__seg-1--${

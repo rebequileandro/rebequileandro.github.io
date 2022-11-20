@@ -1,19 +1,18 @@
+import { useState } from 'react';
 import { Tabbar } from './components';
 import { useObserver } from './hooks';
-
-import { Home } from './pages';
+import { AboutMe, Contact, Home, Projects } from './pages';
 
 const App: React.FC = () => {
-  const [inView, ref, entries] = useObserver({
-    root: null,
-    threshold: 0.5
-  });
-  console.log(inView);
+  const [inView, serInView] = useState<string>('home');
 
   return (
     <>
-      <Home reference={ref} />
-      <Tabbar inView="home" />
+      <Home serInView={serInView} />
+      <AboutMe serInView={serInView} />
+      <Projects serInView={serInView} />
+      <Contact serInView={serInView} />
+      <Tabbar inView={inView} />
     </>
   );
 };

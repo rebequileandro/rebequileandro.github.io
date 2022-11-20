@@ -1,6 +1,7 @@
 @import '@/scss/index.scss';
 .home {
-  @include limits(90vw, 100vh);
+  @include limits(90vw, 100vh, auto);
+  border: solid 1px aqua;
   @include center;
   gap: 1rem;
   &__seg-1 {
