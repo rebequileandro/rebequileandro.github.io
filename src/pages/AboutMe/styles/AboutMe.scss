@@ -2,20 +2,37 @@
 .aboutme {
   @include limits(90vw, 100vh, auto);
   @include center;
-  gap: 3rem;
+  flex-direction: column;
+
   // border: solid 1px aqua;
+  &__top {
+    @include center;
+    gap: 3rem;
+  }
   &__photos {
-    width: 40rem;
-    height: 40rem;
+    width: 30rem;
+    height: 30rem;
     border-radius: 50%;
     overflow: hidden;
-    box-shadow: 0px 0px 10rem 0.1rem #00ccff38;
+    background-image: url('@/assets/leandro-rebequi1.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: -5rem 6rem 10rem 0.1rem #00ccff36,
+      10rem -5rem 10rem 0.1rem #006eff4f;
+    opacity: 0;
+    transition: all 2s;
+    &:hover {
+      box-shadow: -5rem 6rem 10rem 0.1rem #00ccff,
+        10rem -5rem 10rem 0.1rem #006eff;
+    }
     &--in {
       opacity: 0;
-      animation: fade-in-07 1s 1 0.5s forwards;
+      background-position: 0 0;
+      animation: background-animation 3s 1 forwards;
     }
     &--out {
       opacity: 0.7;
+      background-position: -30px -5px;
       animation: fade-out 1s 1 forwards;
     }
     &__img {
@@ -25,10 +42,11 @@
     }
   }
   &__decription-container {
-    max-width: 40%;
+    max-width: 30%;
     display: flex;
     flex-direction: column;
     text-align: end;
+    transform: translateY(-20%);
   }
   &__sub-title {
     @include gradien-text;
@@ -36,7 +54,6 @@
     opacity: 0;
     &--in {
       opacity: 1;
-
       animation: fade-in-translateX-0-text-shadow 2.5s 1;
     }
     &--out {
@@ -51,12 +68,43 @@
     transition: all 1s;
     opacity: 0;
     &--in {
-      transform: translateX(20%);
+      transform: translateX(10%);
       animation: fade-in-translateX-0 1s 1 forwards;
     }
     &--out {
       opacity: 1;
       animation: fade-out 1s 1 forwards;
+    }
+  }
+  &__skill {
+    width: 80%;
+
+    &__title {
+      transition: all 1s;
+      @include gradien-text;
+      opacity: 0;
+      &--in {
+        opacity: 0;
+        transform: translateX(10%);
+        animation: fade-in-translateX-0 1s 1 forwards;
+      }
+      &--out {
+        opacity: 1;
+        animation: fade-out 1s 1 forwards;
+      }
+      &:hover {
+        text-shadow: 0px 0px 1rem #00ccff;
+      }
+    }
+    &__item {
+      opacity: 0;
+      transform: translateX(10%);
+      &::before {
+        display: inline-block;
+        content: '>';
+        @include gradien-text;
+        margin-right: 1rem;
+      }
     }
   }
 }

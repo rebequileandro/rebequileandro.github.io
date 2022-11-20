@@ -9,7 +9,9 @@ button {
   font-family: var(--font-poppins);
   cursor: pointer;
 }
-
+ul {
+  list-style: none;
+}
 * {
   scrollbar-width: 0;
   scrollbar-color: #ffffff00 #ffffff00;

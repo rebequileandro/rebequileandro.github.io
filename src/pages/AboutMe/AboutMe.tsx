@@ -1,9 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import './styles/AboutMe.scss';
 import { useObserver } from '@/hooks';
-import lr1 from '@/assets/leandro-rebequi1.webp';
-import lr2 from '@/assets/leandro-rebequi2.webp';
-
+import { dataPage } from '@/utils';
 export interface AboutMeInterface {
   serInView: React.Dispatch<React.SetStateAction<string>>;
 }
@@ -19,40 +17,60 @@ const AboutMe: React.FC<AboutMeInterface> = ({ serInView }) => {
 
   return (
     <section className="aboutme" ref={setReference} id="about-me">
-      <div
-        className={`aboutme__photos aboutme__photos--${
-          isIntersecting ? 'in' : 'out'
-        }`}
-      >
-        <img src={lr1} alt="leandro rebequi" className="aboutme__photos__img" />
+      <div className="aboutme__top">
+        <div
+          className={`aboutme__photos aboutme__photos--${
+            isIntersecting ? 'in' : 'out'
+          }`}
+        />
+        <div className="aboutme__decription-container">
+          <h2
+            className={`text-primary--sub aboutme__sub-title aboutme__sub-title--${
+              isIntersecting ? 'in' : 'out'
+            }`}
+          >
+            Sobre mi
+          </h2>
+          <div
+            style={{}}
+            className={`text-secondary--sub aboutme__description aboutme__description--${
+              isIntersecting ? 'in' : 'out'
+            }`}
+          >
+            {dataPage.aboutMe.description}
+          </div>
+        </div>
       </div>
-      <div className="aboutme__decription-container">
+      <div className="aboutme__skill">
         <h2
-          className={`text-primary--sub aboutme__sub-title aboutme__sub-title--${
+          className={`text-secondary--main aboutme__skill__title aboutme__skill__title--${
             isIntersecting ? 'in' : 'out'
           }`}
         >
-          Sobre mi
+          Algunas de mis Skills
         </h2>
-        <p
-          style={{}}
-          className={`text-secondary--sub aboutme__description aboutme__description--${
-            isIntersecting ? 'in' : 'out'
-          }`}
-        >
-          ¡Hola! Mi nombre es Leandro Rebequi y me apasioná crear cosas desde 0
-          y ver como se trasforman en algo increíble. <br />
-          <br />
-          Mis inicios en el desarrollo web comenzaron a mediados del 2019,
-          comencé haciendo simples maquetaciones en HTML y CSS, inspeccionando
-          códigos de otras webs y viendo cursos en YouTube.
-          <br />
-          Luego por el 2021, comencé a capacitarme más en serio, tome un
-          Bootcamp Full Stack, donde adquirí una buena base para crear webs y
-          aplicaciones completas, a partir de ese punto comencé a capacitarme
-          por mi cuenta a medida que los trabajos o proyectos lo iban
-          requiriendo.
-        </p>
+        <ul>
+          {dataPage.aboutMe.skills.map((skill: string, index) => (
+            <li
+              className="text-secondary--sub aboutme__skill__item"
+              style={
+                isIntersecting
+                  ? {
+                      animation: `fade-in-translateX-0 1s 1 ${
+                        index / 2
+                      }s forwards`
+                    }
+                  : {
+                      transform: 'translateX(0)',
+                      opacity: 1,
+                      animation: 'fade-out 1s 1 forwards'
+                    }
+              }
+            >
+              {skill}
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );
