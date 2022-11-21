@@ -10,7 +10,7 @@ export interface ProjectsInterface {
 const Projects: React.FC<ProjectsInterface> = ({ serInView }) => {
   const [isIntersecting, setReference] = useObserver({
     root: null,
-    threshold: 0.5
+    threshold: 0.3
   });
   useEffect(() => {
     isIntersecting && serInView('projects');
@@ -18,18 +18,29 @@ const Projects: React.FC<ProjectsInterface> = ({ serInView }) => {
 
   return (
     <div className="projects" ref={setReference} id="projects">
-      <h2 className="text-primary--sub projects__title">
+      <h2
+        className={`text-primary--sub projects__title projects__title--${
+          isIntersecting ? 'in' : 'out'
+        }`}
+      >
         Trabajos | Proyectos
       </h2>
       <div className="projects__container">
         {dataPage.projects.map((project, index) => (
-          <div className={`projects__item projects__item--${index}`}>
-            <p className="projects__item__description">{project.description}</p>
+          <div
+            className={`projects__item projects__item-${index} projects__item-${index}--${
+              isIntersecting ? 'in' : 'out'
+            }`}
+          >
+            <p className="projects__item__description heading-tertiary--sub">
+              {project.description}
+            </p>
             <ProjectCard
               image={project.image}
               title={project.title}
               description={project.technologies}
               type={project.type}
+              link={project.url}
             />
           </div>
         ))}

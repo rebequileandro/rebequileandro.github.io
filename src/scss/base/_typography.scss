@@ -38,4 +38,9 @@
       text-transform: uppercase;
     }
   }
+  &--sub {
+    font-family: inherit;
+    font-size: $SIZE-14;
+    font-weight: 400;
+  }
 }

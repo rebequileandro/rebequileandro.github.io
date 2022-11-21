@@ -7,12 +7,19 @@
     overflow: hidden;
     width: 35rem;
     height: 20rem;
-
+    box-shadow: -2rem 2rem 10rem 0.1rem #00ccff65,
+      3rem -3rem 10rem 0.1rem #0e4eff5b;
     margin: 10px;
     color: #ffffff;
     text-align: center;
     font-size: 16px;
     background-color: #000000;
+    transition: all 1s;
+    border-radius: 1.5rem;
+    &:hover {
+      box-shadow: -5rem 6rem 10rem 0.1rem #00ccff,
+        10rem -5rem 10rem 0.1rem #0e4eff;
+    }
     img {
       width: 100%;
       height: 100%;

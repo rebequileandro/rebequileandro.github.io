@@ -36,7 +36,7 @@ const dataPage = {
     skills: [
       'JavaScript',
       'TypeScript',
-      'React/React Native',
+      'React | React Native',
       'Redux',
       'Python'
     ]
@@ -44,35 +44,47 @@ const dataPage = {
   projects: [
     {
       title: 'Shooza',
-      description:
-        'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book',
+      description: `Shooza es una aplicación que emplea las
+      tecnologías de TWA (Trusted Web Activities)
+      para ejecutar una aplicación web como
+      aplicación móvil,
+      la misma está construida principalmente con
+      ReactJS, Redux y Socket.io entre otras.`,
       image: shooza,
       technologies: 'React, JavaScript, Lax, Redux, Socket.io, Sass',
-      type: 'MOBILE'
+      type: 'MOBILE',
+      url: 'https://shooza.co/'
     },
     {
       title: 'PocketFit',
-      description:
-        'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book',
+      description: `PocketFit es una aplicación creada para la administración de gimnasios desarrollada 
+      en React.js y Redux por la parte del front-end y node.js, postgreSQL , Express y Sequelize por la 
+      parte del back-end también cuenta con una versión mobile para clientes desarrollada en 
+      react-native.`,
       image: pocketFit,
       technologies: 'React, React Native, JavaScript, Firebase, Redux',
-      type: 'WEB | MOBILE'
+      type: 'WEB | MOBILE',
+      url: 'https://pocketgym.vercel.app/'
     },
     {
       title: 'Chat',
-      description:
-        'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book',
+      description: `Esta es una aplicación web creada con React y Firebase en la cual podrás chatear y 
+      conocer gente aleatoria sin necesidad de registrarte, se pueden crear otras salas, cambiar el 
+      color con el que apareces en el chat y enviar emojis`,
       image: chat,
       technologies: 'React, JavaScript, Firebase',
-      type: 'WEB'
+      type: 'WEB',
+      url: 'https://chat-room-b3f57.web.app/'
     },
     {
       title: 'WeatherApp',
-      description:
-        'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book',
+      description: `En  WeatherApp podrás consultar el clima de cualquier parte del mundo, 
+      así como sus coordenadas geográficas, los viento y la nubosidad, para la elaboración de 
+      la misma se utilizó Reac.JS y la API del Clima OpenWeather`,
       image: weatherApp,
       technologies: 'React, JavaScript',
-      type: 'WEB'
+      type: 'WEB',
+      url: 'https://vercel-weather-app.vercel.app/'
     }
   ]
 };

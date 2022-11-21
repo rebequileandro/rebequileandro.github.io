@@ -5,6 +5,7 @@ export interface ProjectCardInterface {
   title: string;
   type: string;
   description: string;
+  link: string;
 }
 const ProjectCard: React.FC<ProjectCardInterface> = (props) => {
   return (
@@ -20,7 +21,7 @@ const ProjectCard: React.FC<ProjectCardInterface> = (props) => {
         <p className="heading-tertiary--main">Tecnologías empleadas:</p>
         <p className="heading-tertiary--main">{props.description}</p>
       </figcaption>
-      <a href="#"></a>
+      <a href={props.link} target="_blank"></a>
     </figure>
   );
 };
