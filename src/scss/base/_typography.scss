@@ -29,20 +29,10 @@
 .heading-tertiary {
   /*h3*/
   color: $WHITE-COLOR;
-  font-family: 'Acumin Pro Wide', sans-serif;
-  &-main {
+  &--main {
     /*Drinks name*/
     font-family: inherit;
     font-size: $SIZE-14;
-    font-weight: 600;
-    &--upper {
-      text-transform: uppercase;
-    }
-  }
-
-  &-sub {
-    /*Drinks price*/
-    font-size: $SIZE-16;
     font-weight: 600;
     &--upper {
       text-transform: uppercase;

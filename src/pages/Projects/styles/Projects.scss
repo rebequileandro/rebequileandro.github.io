@@ -2,5 +2,33 @@
 
 .projects {
   @include limits(90vw, 100vh, auto);
+  @include center;
   border: solid 1px aqua;
+  flex-direction: column;
+  &__title {
+    @include gradien-text;
+    transition: all 1s;
+    width: 80%;
+    margin-top: 10rem;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+  }
+  &__item {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    &__description {
+      width: 30%;
+    }
+    &--1 {
+      flex-direction: row-reverse;
+    }
+    &--3 {
+      flex-direction: row-reverse;
+    }
+  }
 }

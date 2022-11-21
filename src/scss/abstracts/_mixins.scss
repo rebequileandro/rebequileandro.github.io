@@ -35,3 +35,11 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@mixin gradien {
+  background: linear-gradient(
+    90deg,
+    $SECONDARY-COLOR,
+    $TERTIARY-COLOR 65%,
+    $CUATERNARY-COLOR 100%
+  );
+}

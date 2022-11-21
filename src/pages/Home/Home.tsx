@@ -3,7 +3,7 @@ import './styles/Home.scss';
 import Lottie from 'react-lottie';
 import programingAnimation from '@/assets/lottie-files/developer.json';
 import { useObserver } from '@/hooks';
-
+import { dataPage } from '@/utils';
 export interface HomeInterface {
   serInView: React.Dispatch<React.SetStateAction<string>>;
   loadFirstAnimation: boolean;
@@ -41,30 +41,29 @@ const Home: React.FC<HomeInterface> = ({ serInView }) => {
             !loadFirstAnimation ? 'first' : isIntersecting ? 'in' : 'out'
           } text-primary--main`}
         >
-          Full Stack Developer <br />
+          {dataPage.home.title.lineOne} <br />
         </h1>
         <h1
           className={`home__seg-2 home__seg-2--${
             !loadFirstAnimation ? 'first' : isIntersecting ? 'in' : 'out'
           } text-primary--main`}
         >
-          Creo experiencias, <br />
+          {dataPage.home.title.lineTwo} <br />
         </h1>
         <h1
           className={`home__seg-2 home__seg-2--${
             !loadFirstAnimation ? 'first' : isIntersecting ? 'in' : 'out'
           } text-primary--main`}
         >
-          Desarrollo tus ideas
+          {dataPage.home.title.lineThree}
         </h1>
-        <p
+        <div
           className={`home__seg-3--${
             !loadFirstAnimation ? 'first' : isIntersecting ? 'in' : 'out'
           } text-secondary--main`}
         >
-          Mi nombre es Leandro Rebequi, soy <br />
-          desarrollador multiplataforma.
-        </p>
+          {dataPage.home.description}
+        </div>
       </div>
       <div
         className="home__animation-container"
