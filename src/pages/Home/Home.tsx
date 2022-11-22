@@ -6,12 +6,10 @@ import { useObserver } from '@/hooks';
 import { dataPage } from '@/utils';
 export interface HomeInterface {
   serInView: React.Dispatch<React.SetStateAction<string>>;
-  loadFirstAnimation: boolean;
-  scroll: number;
 }
 const Home: React.FC<HomeInterface> = ({ serInView }) => {
-  const [loadFirstAnimation, setLoadFirstAnimation] = useState(false);
-  const [scroll, setScroll] = useState(window.scrollY);
+  const [loadFirstAnimation, setLoadFirstAnimation] = useState<boolean>(false);
+  const [scroll, setScroll] = useState<number>(window.scrollY);
   const [isIntersecting, setReference] = useObserver({
     root: null,
     threshold: 0.5
