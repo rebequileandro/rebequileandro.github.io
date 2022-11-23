@@ -39,13 +39,20 @@ const Contact: React.FC<ContactInterface> = ({ serInView }) => {
 
   return (
     <div className="contact" ref={setReference} id="contact">
-      <form className="contact__form" onSubmit={sendEmail}>
-        <label>Name</label>
-        <Input type="text" name="user_name" onChange={() => null} />
-        <label>Email</label>
-        <Input type="email" name="user_email" onChange={() => null} />
-        <label>Message</label>
-        <TextArea name="message" />
+      <form className="contact__form" onSubmit={sendEmail} autoComplete="false">
+        <Input
+          type="text"
+          placeHolder="Nombre"
+          name="user_name"
+          onChange={() => null}
+        />
+        <Input
+          type="email"
+          placeHolder="Email"
+          name="user_email"
+          onChange={() => null}
+        />
+        <TextArea name="message" placeHolder="Mensaje" />
         <div className="contact__buttons">
           <button
             className="border-gradient contact__buttons--btn"

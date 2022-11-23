@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Tabbar } from './components';
+import { LightBlue, LightCyan, Tabbar } from './components';
 import { AboutMe, Contact, Home, Projects } from './pages';
 
 const App: React.FC = () => {
@@ -8,8 +8,10 @@ const App: React.FC = () => {
   return (
     <>
       <Home serInView={serInView} />
+      <LightBlue rigth={false} />
       <AboutMe serInView={serInView} />
       <Projects serInView={serInView} />
+      <LightBlue rigth />
       <Contact serInView={serInView} />
       <Tabbar inView={inView} />
     </>

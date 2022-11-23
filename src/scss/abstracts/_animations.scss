@@ -63,7 +63,7 @@
   }
 }
 
-@keyframes respiracion {
+@keyframes breathing {
   0% {
     transform: scale(0.7);
   }
@@ -80,7 +80,7 @@
     opacity: 1;
   }
   5% {
-    opacity: 0;
+    opacity: 1;
   }
   10% {
     opacity: 0;
