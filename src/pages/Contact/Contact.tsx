@@ -3,8 +3,6 @@ import './styles/Contact.scss';
 import { useObserver } from '@/hooks';
 import emailjs from '@emailjs/browser';
 
-// const { SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY } = process.env ?? "";
-
 export interface ContactInterface {
   serInView: React.Dispatch<React.SetStateAction<string>>;
 }
@@ -23,7 +21,7 @@ const Contact: React.FC<ContactInterface> = ({ serInView }) => {
     const form: any = event.target;
     emailjs
       .sendForm(
-        import.meta.env.VITE_SERVICE_ID,
+        'leandro_rebequi1398',
         import.meta.env.VITE_TEMPLATE_ID,
         form,
         import.meta.env.VITE_PUBLIC_KEY
