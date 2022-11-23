@@ -8,7 +8,11 @@ button {
   background: none;
   font-family: var(--font-poppins);
   cursor: pointer;
+  &:focus {
+    outline: none;
+  }
 }
+
 ul {
   list-style: none;
 }
@@ -18,4 +22,13 @@ ul {
 }
 *::-webkit-scrollbar {
   display: none;
+}
+
+input,
+textarea {
+  border: none;
+  background: none;
+  &:focus {
+    outline: none;
+  }
 }

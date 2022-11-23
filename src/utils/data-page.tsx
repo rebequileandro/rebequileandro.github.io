@@ -58,9 +58,9 @@ const dataPage = {
     {
       title: 'PocketFit',
       description: `PocketFit es una aplicación creada para la administración de gimnasios desarrollada 
-      en React.js y Redux por la parte del front-end y node.js, postgreSQL , Express y Sequelize por la 
-      parte del back-end también cuenta con una versión mobile para clientes desarrollada en 
-      react-native.`,
+      en React.js y Redux por la parte del Frontend y Node.js, Express, y postgreSQL por la 
+      parte del Backend también cuenta con una versión mobile para clientes desarrollada en 
+      React Native.`,
       image: pocketFit,
       technologies: 'React, React Native, JavaScript, Firebase, Redux',
       type: 'WEB | MOBILE',

@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import './styles/Contact.scss';
-import { useObserver } from '@/hooks';
 import emailjs from '@emailjs/browser';
+import { useObserver } from '@/hooks';
+import { Input, TextArea } from '@/components';
 
 export interface ContactInterface {
   serInView: React.Dispatch<React.SetStateAction<string>>;
@@ -38,14 +39,24 @@ const Contact: React.FC<ContactInterface> = ({ serInView }) => {
 
   return (
     <div className="contact" ref={setReference} id="contact">
-      <form onSubmit={sendEmail}>
+      <form className="contact__form" onSubmit={sendEmail}>
         <label>Name</label>
-        <input type="text" name="user_name" />
+        <Input type="text" name="user_name" onChange={() => null} />
         <label>Email</label>
-        <input type="email" name="user_email" />
+        <Input type="email" name="user_email" onChange={() => null} />
         <label>Message</label>
-        <textarea name="message" />
-        <input type="submit" value="Send" />
+        <TextArea name="message" />
+        <div className="contact__buttons">
+          <button
+            className="border-gradient contact__buttons--btn"
+            type="reset"
+          >
+            Cancelar
+          </button>
+          <button className="btn contact__buttons--btn" type="submit">
+            Enviar
+          </button>
+        </div>
       </form>
     </div>
   );

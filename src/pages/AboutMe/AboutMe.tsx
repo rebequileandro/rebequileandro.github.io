@@ -17,30 +17,6 @@ const AboutMe: React.FC<AboutMeInterface> = ({ serInView }) => {
 
   return (
     <section className="aboutme" ref={setReference} id="about-me">
-      <div className="aboutme__top">
-        <div
-          className={`aboutme__photos aboutme__photos--${
-            isIntersecting ? 'in' : 'out'
-          }`}
-        />
-        <div className="aboutme__decription-container">
-          <h2
-            className={`text-primary--sub aboutme__sub-title aboutme__sub-title--${
-              isIntersecting ? 'in' : 'out'
-            }`}
-          >
-            Sobre mi
-          </h2>
-          <div
-            style={{}}
-            className={`text-secondary--sub aboutme__description aboutme__description--${
-              isIntersecting ? 'in' : 'out'
-            }`}
-          >
-            {dataPage.aboutMe.description}
-          </div>
-        </div>
-      </div>
       <div className="aboutme__skill">
         <h2
           className={`text-secondary--main aboutme__skill__title aboutme__skill__title--${
@@ -57,7 +33,7 @@ const AboutMe: React.FC<AboutMeInterface> = ({ serInView }) => {
                 isIntersecting
                   ? {
                       animation: `fade-in-translateX-0 1s 1 ${
-                        index / 2
+                        index == 0 ? 0.2 : index / 1.5
                       }s forwards`
                     }
                   : {
@@ -71,6 +47,27 @@ const AboutMe: React.FC<AboutMeInterface> = ({ serInView }) => {
             </li>
           ))}
         </ul>
+      </div>
+      <div
+        className={`aboutme__photos aboutme__photos--${
+          isIntersecting ? 'in' : 'out'
+        }`}
+      />
+      <div className="aboutme__decription-container">
+        <h2
+          className={`text-primary--sub aboutme__sub-title aboutme__sub-title--${
+            isIntersecting ? 'in' : 'out'
+          }`}
+        >
+          Sobre mi
+        </h2>
+        <div
+          className={`text-secondary--sub aboutme__description aboutme__description--${
+            isIntersecting ? 'in' : 'out'
+          }`}
+        >
+          {dataPage.aboutMe.description}
+        </div>
       </div>
     </section>
   );

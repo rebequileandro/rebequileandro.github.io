@@ -1,15 +1,16 @@
 @import '@/scss/index.scss';
 
 .projects {
-  @include limits(90vw, 155vh, auto);
+  @include limits(90vw, auto, auto);
+  min-height: 100vh;
   flex-direction: column;
-  border: solid 1px transparent;
+  border: solid 1px rgba(0, 255, 255, 0);
 
   &__title {
     @include gradien-text;
     transition: all 1s;
     width: 80%;
-    margin-top: 10rem;
+    margin-top: 8rem;
     margin-left: 13rem;
     opacity: 0;
     &:hover {
