@@ -1,21 +1,15 @@
-import { useState } from 'react';
-import { LightBlue, LightCyan, Tabbar } from './components';
-import { AboutMe, Contact, Home, Projects } from './pages';
+import { Routes, Route } from 'react-router-dom';
+import { CV, Landing, NotFound } from './pages';
+import Main from './pages/Main';
 
 const App: React.FC = () => {
-  const [inView, serInView] = useState<string>('home');
-
   return (
-    <>
-      <Home serInView={serInView} />
-      <LightBlue position={'start'} />
-      <AboutMe serInView={serInView} />
-      <LightBlue position={'end'} />
-      <Projects serInView={serInView} />
-      <Contact serInView={serInView} />
-      <LightBlue position={'center'} />
-      <Tabbar inView={inView} />
-    </>
+    <Routes>
+      <Route path="/" element={<Landing />} />
+      <Route path="/App" element={<Main />} />
+      <Route path="/leandro-rebequi-cv" element={<CV />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   );
 };
 

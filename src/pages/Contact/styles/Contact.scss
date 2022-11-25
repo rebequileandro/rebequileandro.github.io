@@ -28,6 +28,18 @@
     align-items: center;
     justify-content: center;
     gap: 1.2rem;
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    span {
+      transition: all 0.5s;
+      @include gradien-text;
+      transform: translateY(-60%);
+      opacity: 0;
+    }
     &__icon {
       transition: all 0.5s;
       &:hover {
@@ -38,6 +50,12 @@
       &--in {
         opacity: 0;
         animation: top-to-bottom-50 2s 1 1.7s forwards;
+        &:hover {
+          span {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
       }
       &--out {
         opacity: 1;
@@ -48,6 +66,12 @@
       &--in {
         opacity: 0;
         animation: top-to-bottom-50 2s 1 1.9s forwards;
+        &:hover {
+          span {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
       }
       &--out {
         opacity: 1;
@@ -58,6 +82,12 @@
       &--in {
         opacity: 0;
         animation: top-to-bottom-50 2s 1 2.1s forwards;
+        &:hover {
+          span {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
       }
       &--out {
         opacity: 1;
@@ -68,6 +98,28 @@
       &--in {
         opacity: 0;
         animation: top-to-bottom-50 2s 1 2.3s forwards;
+        &:hover {
+          span {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+      }
+      &--out {
+        opacity: 1;
+        animation: fade-out 1s 1 forwards;
+      }
+    }
+    &__fifth {
+      &--in {
+        opacity: 0;
+        animation: top-to-bottom-50 2s 1 2.5s forwards;
+        &:hover {
+          span {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
       }
       &--out {
         opacity: 1;

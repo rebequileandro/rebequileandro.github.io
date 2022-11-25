@@ -51,13 +51,7 @@
     bottom: 1rem;
     padding: 0 0.8rem;
     justify-content: space-evenly;
-    transform: translateX(-50%) translateY(100px);
-    animation: nav-bottom 1s 3s ease forwards;
-  }
-
-  @keyframes nav-bottom {
-    to {
-      transform: translateX(-50%) translateY(0);
-    }
+    transform: translate(-50%);
+    animation: none;
   }
 }

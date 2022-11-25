@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './styles/Contact.scss';
 import { useObserver } from '@/hooks';
 import { ContactForm } from './ContactForm';
@@ -6,12 +6,15 @@ import linkedin from '@/assets/icons/linkedin.svg';
 import github from '@/assets/icons/github.svg';
 import gmail from '@/assets/icons/gmail.svg';
 import telegram from '@/assets/icons/telegram.svg';
+import cv from '@/assets/icons/cv.svg';
+import CV from '@/assets/Leandro Rebequi.pdf';
 
 export interface ContactInterface {
   serInView: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const Contact: React.FC<ContactInterface> = ({ serInView }) => {
+  const [isMobile, setIsMobile] = useState<boolean>(false);
   const [isIntersecting, setReference] = useObserver({
     root: null,
     threshold: 0.5
@@ -19,7 +22,11 @@ const Contact: React.FC<ContactInterface> = ({ serInView }) => {
   useEffect(() => {
     isIntersecting && serInView('contact');
   }, [isIntersecting]);
-
+  useEffect(() => {
+    if (typeof window.orientation !== 'undefined') {
+      setIsMobile(true);
+    }
+  }, []);
   return (
     <>
       <div className="contact" ref={setReference} id="contact">
@@ -46,6 +53,7 @@ const Contact: React.FC<ContactInterface> = ({ serInView }) => {
               src={linkedin}
               alt="linkedin"
             />
+            <span className="contact__links__text">LinkedIn</span>
           </a>
           <a
             className={`contact__links__second--${
@@ -55,6 +63,7 @@ const Contact: React.FC<ContactInterface> = ({ serInView }) => {
             target="_blank"
           >
             <img className="contact__links__icon" src={github} alt="github" />
+            <span className="contact__links__text">GitHub</span>
           </a>
           <a
             className={`contact__links__third--${
@@ -64,6 +73,7 @@ const Contact: React.FC<ContactInterface> = ({ serInView }) => {
             target="_blank"
           >
             <img className="contact__links__icon" src={gmail} alt="gamil" />
+            <span className="contact__links__text">Gmail</span>
           </a>
           <a
             className={`contact__links__fourth--${
@@ -77,6 +87,20 @@ const Contact: React.FC<ContactInterface> = ({ serInView }) => {
               src={telegram}
               alt="telegram"
             />
+            <span className="contact__links__text">Telegram</span>
+          </a>
+          <a
+            className={`contact__links__fifth--${
+              isIntersecting ? 'in' : 'out'
+            }`}
+            href={isMobile ? CV : 'http://localhost:5173/leandro-rebequi-cv'}
+            download={
+              isMobile ? 'Leandro Rebequi Full Stack Developer.pdf' : false
+            }
+            target="_blank"
+          >
+            <img className="contact__links__icon" src={cv} alt="telegram" />
+            <span className="contact__links__text">CV</span>
           </a>
         </div>
       </div>
