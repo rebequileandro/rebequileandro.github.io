@@ -8,11 +8,12 @@ const App: React.FC = () => {
   return (
     <>
       <Home serInView={serInView} />
-      <LightBlue rigth={false} />
+      <LightBlue position={'start'} />
       <AboutMe serInView={serInView} />
+      <LightBlue position={'end'} />
       <Projects serInView={serInView} />
-      <LightBlue rigth />
       <Contact serInView={serInView} />
+      <LightBlue position={'center'} />
       <Tabbar inView={inView} />
     </>
   );

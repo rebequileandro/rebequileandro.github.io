@@ -4,7 +4,8 @@ export interface InputInterface {
   type: string;
   name: string;
   placeHolder: string;
-  onChange: () => void | null;
+  value: string;
+  onChange: (e: any) => void;
 }
 
 const Input: React.FC<InputInterface> = (prop) => {

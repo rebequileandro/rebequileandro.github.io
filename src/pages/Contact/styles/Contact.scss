@@ -13,6 +13,14 @@
     &:hover {
       text-shadow: 0px 0px 1rem #00ccff;
     }
+    &--in {
+      opacity: 0;
+      animation: top-to-bottom-50 2s 1 forwards;
+    }
+    &--out {
+      opacity: 1;
+      animation: fade-out 1s 1 forwards;
+    }
   }
   &__links {
     margin-top: 4rem;
@@ -21,11 +29,49 @@
     justify-content: center;
     gap: 1.2rem;
     &__icon {
-      opacity: 0.9;
       transition: all 0.5s;
       &:hover {
-        filter: drop-shadow(0 0 0.75rem #2470d3);
+        filter: drop-shadow(0 0 1rem #2470d3);
+      }
+    }
+    &__first {
+      &--in {
+        opacity: 0;
+        animation: top-to-bottom-50 2s 1 1.7s forwards;
+      }
+      &--out {
         opacity: 1;
+        animation: fade-out 1s 1 forwards;
+      }
+    }
+    &__second {
+      &--in {
+        opacity: 0;
+        animation: top-to-bottom-50 2s 1 1.9s forwards;
+      }
+      &--out {
+        opacity: 1;
+        animation: fade-out 1s 1 forwards;
+      }
+    }
+    &__third {
+      &--in {
+        opacity: 0;
+        animation: top-to-bottom-50 2s 1 2.1s forwards;
+      }
+      &--out {
+        opacity: 1;
+        animation: fade-out 1s 1 forwards;
+      }
+    }
+    &__fourth {
+      &--in {
+        opacity: 0;
+        animation: top-to-bottom-50 2s 1 2.3s forwards;
+      }
+      &--out {
+        opacity: 1;
+        animation: fade-out 1s 1 forwards;
       }
     }
   }

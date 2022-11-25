@@ -74,6 +74,10 @@
   .home {
     flex-direction: column;
     gap: 10%;
+    text-align: center;
+    &__seg-1 {
+      margin-top: 5rem;
+    }
     &__animation-container {
       @include limits(100%, 30%);
     }

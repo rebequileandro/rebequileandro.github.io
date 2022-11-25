@@ -38,6 +38,7 @@ const dataPage = {
       'TypeScript',
       'React | React Native',
       'Redux',
+      'Node',
       'Python'
     ]
   },

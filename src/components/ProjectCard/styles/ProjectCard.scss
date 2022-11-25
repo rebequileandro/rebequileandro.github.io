@@ -152,3 +152,10 @@
     transition-delay: 0.2s;
   }
 }
+@media (max-width: $BREAKPOINT-TABLET) {
+  .projectcard {
+    &__image {
+      width: 70%;
+    }
+  }
+}

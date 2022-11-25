@@ -1,11 +1,19 @@
 import React from 'react';
 import './styles/Lights.scss';
 export interface LightsInterface {
-  rigth: boolean;
+  position: string;
 }
 
-const LightBlue: React.FC<LightsInterface> = ({ rigth }) => {
-  return <div className={`light-blue ${rigth && 'light-blue--right'}`} />;
+const LightBlue: React.FC<LightsInterface> = ({ position }) => {
+  return (
+    <div
+      className={`light-blue ${
+        position === 'end'
+          ? 'light-blue--end'
+          : position === 'center' && 'light-blue--center'
+      }`}
+    />
+  );
 };
 
 export default LightBlue;

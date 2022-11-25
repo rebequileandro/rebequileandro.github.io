@@ -1,6 +1,7 @@
 @import '@/scss/index.scss';
 .aboutme {
-  @include limits(90vw, 100vh, auto);
+  @include limits(90vw, auto, auto);
+  min-height: 100vh;
   @include center;
   gap: 5rem;
 
@@ -68,6 +69,7 @@
     }
     &--out {
       opacity: 1;
+      transform: translateX(0);
       animation: fade-out 1s 1 forwards;
     }
   }
@@ -88,6 +90,7 @@
       }
       &--out {
         opacity: 1;
+        transform: translateX(0%);
         animation: fade-out 1s 1 forwards;
       }
       &:hover {
@@ -103,6 +106,23 @@
         @include gradien-text;
         margin-right: 1rem;
       }
+    }
+  }
+}
+@media (max-width: $BREAKPOINT-TABLET) {
+  .aboutme {
+    flex-direction: column-reverse;
+    &__decription-container {
+      max-width: 100%;
+      align-self: center;
+      margin-top: 6rem;
+      text-align: center;
+    }
+    &__description {
+      transform: translate(0);
+    }
+    &__skill {
+      align-self: flex-start;
     }
   }
 }

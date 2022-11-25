@@ -45,11 +45,12 @@
 @media (max-width: $BREAKPOINT-TABLET) {
   .tabbar {
     flex-direction: row;
-    @include limits(26rem, 5rem);
+    @include limits(75%, 6rem);
     left: 50%;
     top: auto;
     bottom: 1rem;
     padding: 0 0.8rem;
+    justify-content: space-evenly;
     transform: translateX(-50%) translateY(100px);
     animation: nav-bottom 1s 3s ease forwards;
   }

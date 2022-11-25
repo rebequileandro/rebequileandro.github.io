@@ -3,6 +3,8 @@ import './styles/TextArea.scss';
 export interface TextAreaInterface {
   name: string;
   placeHolder: string;
+  value: string;
+  onChange: (e: any) => void;
 }
 
 const TextArea: React.FC<TextAreaInterface> = (prop) => {

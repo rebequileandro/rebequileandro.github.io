@@ -24,11 +24,20 @@ const Contact: React.FC<ContactInterface> = ({ serInView }) => {
     <>
       <div className="contact" ref={setReference} id="contact">
         <div>
-          <h2 className="text-primary--sub contact__title">Contáctame</h2>
+          <h2
+            className={`text-primary--sub contact__title contact__title--${
+              isIntersecting ? 'in' : 'out'
+            }`}
+          >
+            Contáctame
+          </h2>
         </div>
-        <ContactForm />
+        <ContactForm isIntersecting={isIntersecting} />
         <div className="contact__links">
           <a
+            className={`contact__links__first--${
+              isIntersecting ? 'in' : 'out'
+            }`}
             href="https://www.linkedin.com/in/leandro-rebequi-dev/"
             target="_blank"
           >
@@ -38,13 +47,31 @@ const Contact: React.FC<ContactInterface> = ({ serInView }) => {
               alt="linkedin"
             />
           </a>
-          <a href="https://github.com/rebequileandro1398" target="_blank">
+          <a
+            className={`contact__links__second--${
+              isIntersecting ? 'in' : 'out'
+            }`}
+            href="https://github.com/rebequileandro1398"
+            target="_blank"
+          >
             <img className="contact__links__icon" src={github} alt="github" />
           </a>
-          <a href="mailto:rebequileandro@gmail.com" target="_blank">
+          <a
+            className={`contact__links__third--${
+              isIntersecting ? 'in' : 'out'
+            }`}
+            href="mailto:rebequileandro@gmail.com"
+            target="_blank"
+          >
             <img className="contact__links__icon" src={gmail} alt="gamil" />
           </a>
-          <a href="https://t.me/leandro_rebequi" target="_blank">
+          <a
+            className={`contact__links__fourth--${
+              isIntersecting ? 'in' : 'out'
+            }`}
+            href="https://t.me/leandro_rebequi"
+            target="_blank"
+          >
             <img
               className="contact__links__icon"
               src={telegram}
