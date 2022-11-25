@@ -93,7 +93,11 @@ const Contact: React.FC<ContactInterface> = ({ serInView }) => {
             className={`contact__links__fifth--${
               isIntersecting ? 'in' : 'out'
             }`}
-            href={isMobile ? CV : 'http://localhost:5173/leandro-rebequi-cv'}
+            href={
+              isMobile
+                ? CV
+                : 'https://rebequileandro1398.github.io/portfolio/leandro-rebequi-cv'
+            }
             download={
               isMobile ? 'Leandro Rebequi Full Stack Developer.pdf' : false
             }
