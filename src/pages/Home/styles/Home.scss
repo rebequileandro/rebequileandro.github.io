@@ -58,12 +58,12 @@
     align-items: center;
     justify-content: center;
     opacity: 0;
-    animation: glich 5s 1 6s forwards;
+    animation: fade-in 3s 1 5s forwards;
     &__glow {
       position: absolute;
-      width: 2rem;
-      height: 2rem;
-      box-shadow: 0px 0px 20rem 10rem #00ccff;
+      width: 0px;
+      height: 0px;
+      box-shadow: 0px 0px 20rem 10rem #008cff9a;
       border-radius: 50%;
       background: radial-gradient(#ffffff, #00ccff);
       animation: respiracion 4s infinite;

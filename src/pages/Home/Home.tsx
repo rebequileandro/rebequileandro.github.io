@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './styles/Home.scss';
 import Lottie from 'react-lottie';
-import programingAnimation from '@/assets/lottie-files/developer.json';
+import programingAnimation from '@/assets/lottie-files/programming.json';
 import { useObserver } from '@/hooks';
 import { dataPage } from '@/utils';
 export interface HomeInterface {
