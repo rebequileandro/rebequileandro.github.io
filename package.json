@@ -21,6 +21,7 @@
     "react-dom": "^18.2.0",
     "react-lottie": "^1.2.3",
     "react-router-dom": "^6.4.3",
+    "react-router-hash-link": "^2.4.3",
     "react-toastify": "^9.1.1",
     "sass": "^1.56.1"
   },
@@ -28,6 +29,7 @@
     "@types/node": "^18.11.9",
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
+    "@types/react-router-hash-link": "^2.4.5",
     "@vitejs/plugin-react": "^2.2.0",
     "typescript": "^4.6.4",
     "vite": "^3.2.3"

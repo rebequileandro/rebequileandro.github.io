@@ -1,6 +1,7 @@
 import React from 'react';
 import './styles/Tabbar.scss';
 import Lottie from 'react-lottie';
+import { HashLink } from 'react-router-hash-link';
 import homeAnimation from '@/assets/lottie-files/tabbar/home-gradient-icon.json';
 import aboutMeAnimation from '@/assets/lottie-files/tabbar/about-me-gradient-icon.json';
 import projectsAnimation from '@/assets/lottie-files/tabbar/portfolio-gradient-icon.json';
@@ -24,7 +25,7 @@ const Tabbar: React.FC<TabbarInterface> = ({ inView }) => {
   };
   return (
     <nav className="tabbar">
-      <a href="#home)">
+      <HashLink to="#home)">
         <div className="tabbar__icon-container">
           {inView === 'home' ? (
             <Lottie options={lottieOptions(homeAnimation)} />
@@ -32,8 +33,8 @@ const Tabbar: React.FC<TabbarInterface> = ({ inView }) => {
             <img className="tabbar__icon" src={home} alt="home" />
           )}
         </div>
-      </a>
-      <a href="#about-me)">
+      </HashLink>
+      <HashLink to="#about-me)">
         <div className="tabbar__icon-container">
           {inView === 'about-me' ? (
             <Lottie options={lottieOptions(aboutMeAnimation)} />
@@ -41,8 +42,8 @@ const Tabbar: React.FC<TabbarInterface> = ({ inView }) => {
             <img className="tabbar__icon" src={aboutMe} alt="about me" />
           )}
         </div>
-      </a>
-      <a href="#projects)">
+      </HashLink>
+      <HashLink to="#projects)">
         <div className="tabbar__icon-container">
           {inView === 'projects' ? (
             <Lottie options={lottieOptions(projectsAnimation)} />
@@ -50,8 +51,8 @@ const Tabbar: React.FC<TabbarInterface> = ({ inView }) => {
             <img className="tabbar__icon" src={projects} alt="project" />
           )}
         </div>
-      </a>
-      <a href="#contact)">
+      </HashLink>
+      <HashLink to="#contact)">
         <div className="tabbar__icon-container">
           {inView === 'contact' ? (
             <Lottie options={lottieOptions(contactAnimation)} />
@@ -59,7 +60,7 @@ const Tabbar: React.FC<TabbarInterface> = ({ inView }) => {
             <img className="tabbar__icon" src={contact} alt="contact" />
           )}
         </div>
-      </a>
+      </HashLink>
     </nav>
   );
 };
