@@ -32,7 +32,7 @@ const Home: React.FC<HomeInterface> = ({ serInView }) => {
     };
   }, []);
   return (
-    <section ref={setReference} className="home" id="home">
+    <section ref={setReference} className="home" id="home)">
       <div>
         <h1
           className={`home__seg-1 home__seg-1--${

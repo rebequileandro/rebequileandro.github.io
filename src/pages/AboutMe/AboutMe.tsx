@@ -16,7 +16,7 @@ const AboutMe: React.FC<AboutMeInterface> = ({ serInView }) => {
   }, [isIntersecting]);
 
   return (
-    <section className="aboutme" ref={setReference} id="about-me">
+    <section className="aboutme" ref={setReference} id="about-me)">
       <div className="aboutme__skill">
         <h2
           className={`text-secondary--main aboutme__skill__title aboutme__skill__title--${

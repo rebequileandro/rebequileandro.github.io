@@ -9,7 +9,7 @@ const App: React.FC = () => {
       element: <Landing />
     },
     {
-      path: '/App',
+      path: '/(',
       element: <Main />
     },
     {

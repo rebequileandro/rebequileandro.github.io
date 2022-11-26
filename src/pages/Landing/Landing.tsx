@@ -10,7 +10,7 @@ const Landing: React.FC<LandingInterface> = () => {
   const navigate = useNavigate();
   useEffect(() => {
     setTimeout(() => {
-      navigate('/App');
+      navigate('/(#home)');
     }, 6000);
   });
   return (
