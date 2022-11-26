@@ -6,6 +6,7 @@
   flex-direction: column;
   justify-content: flex-start;
   border: solid 1px rgba(0, 255, 255, 0);
+  margin-bottom: 10rem;
   &__title {
     @include gradien-text;
     transition: all 1s;
@@ -28,6 +29,8 @@
     align-items: center;
     justify-content: center;
     gap: 1.2rem;
+    margin-bottom: 3rem;
+
     a {
       display: flex;
       flex-direction: column;
