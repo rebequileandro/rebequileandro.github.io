@@ -28,6 +28,7 @@ const Projects: React.FC<ProjectsInterface> = ({ serInView }) => {
       <div className="projects__container">
         {dataPage.projects.map((project, index) => (
           <div
+            key={project.title}
             className={`projects__item projects__item-${index} projects__item-${index}--${
               isIntersecting ? 'in' : 'out'
             }`}

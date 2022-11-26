@@ -28,6 +28,7 @@ const AboutMe: React.FC<AboutMeInterface> = ({ serInView }) => {
         <ul>
           {dataPage.aboutMe.skills.map((skill: string, index) => (
             <li
+              key={skill}
               className="text-secondary--sub aboutme__skill__item"
               style={
                 isIntersecting
