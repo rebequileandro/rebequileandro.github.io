@@ -96,7 +96,7 @@ const Contact: React.FC<ContactInterface> = ({ serInView }) => {
             href={
               isMobile
                 ? CV
-                : 'https://rebequileandro1398.github.io/leandro-rebequi-cv'
+                : 'https://rebequileandro1398.github.io/#/leandro-rebequi-cv'
             }
             download={
               isMobile ? 'Leandro Rebequi Full Stack Developer.pdf' : false
