@@ -13,7 +13,7 @@ const dataPage = {
     description: (
       <p>
         Mi nombre es Leandro Rebequi, soy <br />
-        desarrollador multiplataforma.
+        desarrollador Web | Mobile.
       </p>
     )
   },
