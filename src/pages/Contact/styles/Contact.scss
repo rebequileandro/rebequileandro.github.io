@@ -30,7 +30,6 @@
     justify-content: center;
     gap: 1.2rem;
     margin-bottom: 3rem;
-
     a {
       display: flex;
       flex-direction: column;
@@ -127,6 +126,16 @@
       &--out {
         opacity: 1;
         animation: fade-out 1s 1 forwards;
+      }
+    }
+  }
+}
+
+@media (max-width: $BREAKPOINT-TABLET) {
+  .contact {
+    &__links {
+      &__icon {
+        width: 5rem;
       }
     }
   }

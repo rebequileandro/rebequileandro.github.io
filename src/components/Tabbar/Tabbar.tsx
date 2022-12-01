@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './styles/Tabbar.scss';
 import Lottie from 'react-lottie';
 import { HashLink } from 'react-router-hash-link';
@@ -16,6 +16,18 @@ export interface TabbarInterface {
 }
 
 const Tabbar: React.FC<TabbarInterface> = ({ inView }) => {
+  const fullWindowHeight = window.innerHeight;
+  const [isOpenKeyboard, setIsOpenKeyboard] = useState(false);
+  useEffect(() => {
+    window.addEventListener('resize', () => {
+      if (window.innerHeight < fullWindowHeight * 0.9) {
+        setIsOpenKeyboard(true);
+      } else {
+        setIsOpenKeyboard(false);
+      }
+    });
+  }, []);
+
   const lottieOptions = (data: {}) => {
     return {
       loop: false,
@@ -24,7 +36,7 @@ const Tabbar: React.FC<TabbarInterface> = ({ inView }) => {
     };
   };
   return (
-    <nav className="tabbar">
+    <nav className={isOpenKeyboard ? 'tabbar--hide' : 'tabbar'}>
       <HashLink to="#home)">
         <div className="tabbar__icon-container">
           {inView === 'home' ? (

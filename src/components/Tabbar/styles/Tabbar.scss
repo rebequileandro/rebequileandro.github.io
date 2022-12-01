@@ -13,6 +13,9 @@
   gap: 2rem;
   transform: translateY(-50%) translateX(-100px);
   animation: nav-in 1s ease 1 3s forwards;
+  &--hide {
+    display: none;
+  }
   &__icon-container {
     width: 3.5rem;
     height: 3.5rem;

@@ -122,7 +122,8 @@
       transform: translate(0);
     }
     &__skill {
-      align-self: flex-start;
+      align-self: start;
+      margin-left: 3rem;
     }
   }
 }
