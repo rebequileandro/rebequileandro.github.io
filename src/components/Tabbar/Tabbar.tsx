@@ -37,7 +37,7 @@ const Tabbar: React.FC<TabbarInterface> = ({ inView }) => {
   };
   return (
     <nav className={isOpenKeyboard ? 'tabbar--hide' : 'tabbar'}>
-      <HashLink to="#home)">
+      <HashLink to="#home">
         <div className="tabbar__icon-container">
           {inView === 'home' ? (
             <Lottie options={lottieOptions(homeAnimation)} />
@@ -46,7 +46,7 @@ const Tabbar: React.FC<TabbarInterface> = ({ inView }) => {
           )}
         </div>
       </HashLink>
-      <HashLink to="#about-me)">
+      <HashLink to="#about-me">
         <div className="tabbar__icon-container">
           {inView === 'about-me' ? (
             <Lottie options={lottieOptions(aboutMeAnimation)} />
@@ -55,7 +55,7 @@ const Tabbar: React.FC<TabbarInterface> = ({ inView }) => {
           )}
         </div>
       </HashLink>
-      <HashLink to="#projects)">
+      <HashLink to="#projects">
         <div className="tabbar__icon-container">
           {inView === 'projects' ? (
             <Lottie options={lottieOptions(projectsAnimation)} />
@@ -64,7 +64,7 @@ const Tabbar: React.FC<TabbarInterface> = ({ inView }) => {
           )}
         </div>
       </HashLink>
-      <HashLink to="#contact)">
+      <HashLink to="#contact">
         <div className="tabbar__icon-container">
           {inView === 'contact' ? (
             <Lottie options={lottieOptions(contactAnimation)} />

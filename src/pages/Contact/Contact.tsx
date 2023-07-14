@@ -29,7 +29,7 @@ const Contact: React.FC<ContactInterface> = ({ serInView }) => {
   }, []);
   return (
     <>
-      <div className="contact" ref={setReference} id="contact)">
+      <div className="contact" ref={setReference} id="contact">
         <div>
           <h2
             className={`text-primary--sub contact__title contact__title--${

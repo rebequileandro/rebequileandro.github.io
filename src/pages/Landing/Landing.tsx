@@ -11,7 +11,7 @@ const Landing: React.FC<LandingInterface> = () => {
   useEffect(() => {
     setTimeout(() => {
       navigate('/(#home)');
-    }, 6000);
+    }, 1000);
   });
   return (
     <div className="landing">

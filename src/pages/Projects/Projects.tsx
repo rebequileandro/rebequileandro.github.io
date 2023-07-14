@@ -17,7 +17,7 @@ const Projects: React.FC<ProjectsInterface> = ({ serInView }) => {
   }, [isIntersecting]);
 
   return (
-    <div className="projects" ref={setReference} id="projects)">
+    <div className="projects" ref={setReference} id="projects">
       <h2
         className={`text-primary--sub projects__title projects__title--${
           isIntersecting ? 'in' : 'out'

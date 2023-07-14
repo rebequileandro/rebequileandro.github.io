@@ -12,7 +12,7 @@
   padding: 0 0.8rem;
   gap: 2rem;
   transform: translateY(-50%) translateX(-100px);
-  animation: nav-in 1s ease 1 3s forwards;
+  animation: nav-in 1s ease 1 1.5s forwards;
   &--hide {
     display: none;
   }
@@ -48,7 +48,7 @@
 @media (max-width: $BREAKPOINT-TABLET) {
   .tabbar {
     flex-direction: row;
-    @include limits(75%, 6rem);
+    @include limits(90%, 6rem);
     left: 50%;
     top: auto;
     bottom: 1rem;

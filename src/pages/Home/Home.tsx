@@ -32,28 +32,14 @@ const Home: React.FC<HomeInterface> = ({ serInView }) => {
     };
   }, []);
   return (
-    <section ref={setReference} className="home" id="home)">
+    <section ref={setReference} className="home" id="home">
       <div>
         <h1
           className={`home__seg-1 home__seg-1--${
             !loadFirstAnimation ? 'first' : isIntersecting ? 'in' : 'out'
           } text-primary--main`}
         >
-          {dataPage.home.title.lineOne} <br />
-        </h1>
-        <h1
-          className={`home__seg-2 home__seg-2--${
-            !loadFirstAnimation ? 'first' : isIntersecting ? 'in' : 'out'
-          } text-primary--main`}
-        >
-          {dataPage.home.title.lineTwo} <br />
-        </h1>
-        <h1
-          className={`home__seg-2 home__seg-2--${
-            !loadFirstAnimation ? 'first' : isIntersecting ? 'in' : 'out'
-          } text-primary--main`}
-        >
-          {dataPage.home.title.lineThree}
+          {dataPage.home.title} <br />
         </h1>
         <div
           className={`home__seg-3--${

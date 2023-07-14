@@ -6,10 +6,6 @@ const App: React.FC = () => {
   const root = useRoutes([
     {
       path: '/',
-      element: <Landing />
-    },
-    {
-      path: '/(',
       element: <Main />
     },
     {

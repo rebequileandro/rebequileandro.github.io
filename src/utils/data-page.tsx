@@ -1,15 +1,18 @@
 import shooza from '@/assets/projects/shoozaLanding.png';
 import pocketFit from '@/assets/projects/pocketFit.webp';
 import chat from '@/assets/projects/chatRoom.png';
-import weatherApp from '@/assets/projects/weatherApp.png';
+import bizarrap from '@/assets/projects/bizarrap.png';
 
 const dataPage = {
   home: {
-    title: {
-      lineOne: 'Full Stack Developer',
-      lineTwo: 'Creo experiencias,',
-      lineThree: 'Desarrollo tus ideas'
-    },
+    title: (
+      <>
+        <span className="home__seg-2">Full Stack Developer:</span>
+        <br />
+        Creo experiencias, <br />
+        Desarrollo tus ideas
+      </>
+    ),
     description: (
       <p>
         Mi nombre es Leandro Rebequi, soy <br />
@@ -20,9 +23,7 @@ const dataPage = {
   aboutMe: {
     description: (
       <p>
-        ¡Hola! Mi nombre es Leandro Rebequi y me apasioná crear cosas desde 0 y
-        ver como se trasforman en algo increíble.
-        <br />
+        ¡Hola! Mi nombre es Leandro Rebequi.
         <br />
         Mis inicios en el desarrollo web comenzaron a mediados del 2019, comencé
         haciendo simples maquetaciones en HTML y CSS, inspeccionando códigos de
@@ -43,6 +44,15 @@ const dataPage = {
     ]
   },
   projects: [
+    {
+      title: 'Bizarrap',
+      description: `En la web de Bizarrap podrás encontrar toda la información sobre sus próximos shows, 
+      también podrás encontrar un calendario con fotos y videos exclusivos de sus últimas presentaciones`,
+      image: bizarrap,
+      technologies: 'React, JavaScript',
+      type: 'WEB',
+      url: 'https://bizarrap.com/'
+    },
     {
       title: 'Shooza',
       description: `Shooza es una aplicación que emplea las
@@ -76,16 +86,6 @@ const dataPage = {
       technologies: 'React, JavaScript, Firebase',
       type: 'WEB',
       url: 'https://chat-room-b3f57.web.app/'
-    },
-    {
-      title: 'WeatherApp',
-      description: `En  WeatherApp podrás consultar el clima de cualquier parte del mundo, 
-      así como sus coordenadas geográficas, los viento y la nubosidad, para la elaboración de 
-      la misma se utilizó Reac.JS y la API del Clima OpenWeather`,
-      image: weatherApp,
-      technologies: 'React, JavaScript',
-      type: 'WEB',
-      url: 'https://vercel-weather-app.vercel.app/'
     }
   ]
 };
