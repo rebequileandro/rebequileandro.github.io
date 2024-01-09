@@ -10,7 +10,8 @@
     height: 30rem;
     border-radius: 50%;
     overflow: hidden;
-    background-image: url('@/assets/leandro-rebequi-B&W.jpg');
+    background-image: url('@/assets/leandro-rebequi-a.jpg');
+    // filter: grayscale(100%);
     background-size: cover;
     background-repeat: no-repeat;
     box-shadow: -5rem 6rem 10rem 0.1rem #00ccff36,
@@ -18,14 +19,16 @@
     opacity: 0;
     transition: all 2s;
     &:hover {
-      background-image: url('@/assets/leandro-rebequi.jpg');
+      // background-image: url('@/assets/leandro-rebequi.jpg');
+      // filter: grayscale(0%);
       box-shadow: -5rem 6rem 10rem 0.1rem #00ccff,
         10rem -5rem 10rem 0.1rem #006eff;
+      opacity: 1;
     }
     &--in {
       opacity: 0;
-      background-position: 0rem -2rem;
-      animation: background-animation 3s 1 forwards;
+      animation: background-animation 1s 1 forwards;
+      background-size: cover;
     }
     &--out {
       opacity: 0.7;
@@ -102,7 +105,7 @@
       transform: translateX(50%);
       &::before {
         display: inline-block;
-        content: '>';
+        content: '-';
         @include gradien-text;
         margin-right: 1rem;
       }
