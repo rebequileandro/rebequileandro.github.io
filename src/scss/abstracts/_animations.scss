@@ -38,12 +38,7 @@
     text-shadow: 0px 0px 1rem #00ccff00;
   }
 }
-@keyframes background-animation {
-  100% {
-    background-position: center;
-    opacity: 0.6;
-  }
-}
+
 @keyframes gradient-color {
   from {
     background-position: 0% center;

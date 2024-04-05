@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import './styles/AboutMe.scss';
 import { useObserver } from '@/hooks';
 import { dataPage } from '@/utils';
+import Lottie from 'react-lottie';
+import blobAnimation from '@/assets/lottie-files/blob.json';
 export interface AboutMeInterface {
   serInView: React.Dispatch<React.SetStateAction<string>>;
 }
@@ -17,7 +19,7 @@ const AboutMe: React.FC<AboutMeInterface> = ({ serInView }) => {
 
   return (
     <section className="aboutme" ref={setReference} id="about-me">
-      <div className="aboutme__skill">
+      {/* <div className="aboutme__skill">
         <h2
           className={`text-secondary--main aboutme__skill__title aboutme__skill__title--${
             isIntersecting ? 'in' : 'out'
@@ -48,13 +50,24 @@ const AboutMe: React.FC<AboutMeInterface> = ({ serInView }) => {
             </li>
           ))}
         </ul>
-      </div>
+      </div> */}
       <div
-        className={`aboutme__photos aboutme__photos--${
+        className={`aboutme__photos-container aboutme__photos-container--${
           isIntersecting ? 'in' : 'out'
         }`}
-      />
-      <div className="aboutme__decription-container">
+      >
+        <div className="aboutme__blob">
+          <Lottie
+            options={{
+              loop: true,
+              autoplay: true,
+              animationData: blobAnimation
+            }}
+          />
+        </div>
+        <div className={`aboutme__photos`} />
+      </div>
+      {/* <div className="aboutme__decription-container">
         <h2
           className={`text-primary--sub aboutme__sub-title aboutme__sub-title--${
             isIntersecting ? 'in' : 'out'
@@ -69,7 +82,7 @@ const AboutMe: React.FC<AboutMeInterface> = ({ serInView }) => {
         >
           {dataPage.aboutMe.description}
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };
