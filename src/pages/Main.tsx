@@ -9,7 +9,6 @@ export interface MainInterface {}
 
 const Main: React.FC<MainInterface> = () => {
   const [inView, serInView] = useState<string>('home');
-  console.log('<A></A>');
   return (
     <>
       <div className="main__line0">
