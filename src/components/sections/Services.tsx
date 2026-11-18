@@ -7,22 +7,22 @@ gsap.registerPlugin(ScrollTrigger);
 
 const SERVICES = [
   {
-    title: 'Desarrollo Frontend',
-    description: 'Interfaces de usuario modernas, rápidas y altamente interactivas con React, Next.js y GSAP. Enfoque en UX y rendimiento.',
+    title: 'Productos Web Completos',
+    description: 'De la interfaz a la base de datos: diseño, desarrollo y despliegue de aplicaciones pensadas como un único sistema.',
     icon: Layout,
-    features: ['Single Page Applications', 'Animaciones Premium', 'Core Web Vitals', 'Responsive Design'],
+    features: ['Aplicaciones web', 'Paneles de gestión', 'E-commerce', 'Plataformas SaaS'],
   },
   {
-    title: 'Integraciones & Backend',
-    description: 'Arquitecturas sólidas en Node.js, integraciones de API de terceros y gestión de bases de datos escalables.',
+    title: 'Integraciones & Automatización',
+    description: 'Conecto tu producto con pagos, APIs de terceros y las herramientas que ya usás, y automatizo los procesos repetitivos.',
     icon: Server,
-    features: ['RESTful / GraphQL APIs', 'Autenticación Segura', 'Optimización de DB', 'Arquitectura Serverless'],
+    features: ['APIs REST / GraphQL', 'Pasarelas de pago', 'Autenticación segura', 'Automatización de flujos'],
   },
   {
-    title: 'Sistemas a Medida',
-    description: 'Soluciones end-to-end diseñadas específicamente para las necesidades de tu negocio o startup.',
+    title: 'Rendimiento & Escalabilidad',
+    description: 'Sitios rápidos, accesibles y preparados para crecer, con infraestructura moderna y monitoreo desde el primer día.',
     icon: Code2,
-    features: ['Dashboards Corporativos', 'E-commerce Avanzado', 'SaaS Multitenant', 'Automatización de Flujos'],
+    features: ['Core Web Vitals', 'SEO técnico', 'Arquitectura serverless', 'Diseño responsive'],
   },
 ];
 

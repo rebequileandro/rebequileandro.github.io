@@ -5,10 +5,10 @@ import { cn } from '../../lib/utils';
 
 const LOG_MESSAGES = [
   { type: 'info', text: '[INFO] Initializing system core...' },
-  { type: 'info', text: '[INFO] Loading frontend assets...' },
+  { type: 'info', text: '[INFO] Loading application modules...' },
   { type: 'success', text: '[SUCCESS] React 19 hydrated' },
   { type: 'info', text: '[INFO] Optimizing bundle size...' },
-  { type: 'info', text: '[INFO] Connecting to backend services...' },
+  { type: 'info', text: '[INFO] Syncing services and data...' },
   { type: 'success', text: '[SUCCESS] API Pipeline active' },
   { type: 'info', text: '[INFO] Loading creative components...' },
   { type: 'success', text: '[SUCCESS] Dashboard ready' },
@@ -80,13 +80,13 @@ export const Hero: React.FC = () => {
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold leading-[1.1]">
-            Construyo <span className="text-primary italic">productos</span> <br />
-            digitales que <span className="text-gradient">funcionan</span>
+            De la <span className="text-primary italic">idea</span> <br />
+            al producto <span className="text-gradient">en marcha</span>
           </h1>
           
           <p className="text-lg md:text-xl text-text-secondary max-w-lg leading-relaxed font-sans">
-            Frontend especializado en experiencias modernas y de alto rendimiento. 
-            Backend sólido cuando hace falta.
+            Diseño, desarrollo y lanzo soluciones digitales de punta a punta:
+            interfaz, servidor, datos e integraciones funcionando como una sola pieza.
           </p>
           
           <div className="flex flex-wrap gap-4 pt-4">

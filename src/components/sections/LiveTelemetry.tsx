@@ -40,7 +40,7 @@ export const LiveTelemetry: React.FC = () => {
           
           <h2 className="text-4xl md:text-5xl font-bold">Telemetría de <br /> <span className="text-gradient">Sistema Activo</span></h2>
           <p className="text-text-secondary text-lg max-w-md">
-            Monitoreo en tiempo real de operaciones backend y estados de integración. Transparencia técnica total.
+            Monitoreo en tiempo real de cada parte del sistema, de la interfaz a los datos. Transparencia técnica total.
           </p>
 
           <div className="grid grid-cols-2 gap-6 pt-4">
