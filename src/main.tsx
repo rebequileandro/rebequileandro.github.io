@@ -1,11 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import './scss/index.scss';
-import { HashRouter } from 'react-router-dom';
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App.tsx'
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <HashRouter>
+gsap.registerPlugin(ScrollTrigger);
+
+createRoot(document.getElementById('root')!).render(
+  <StrictMode>
     <App />
-  </HashRouter>
-);
+  </StrictMode>,
+)
